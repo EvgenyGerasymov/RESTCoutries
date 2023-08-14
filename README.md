@@ -25,36 +25,36 @@ Users should be able to:
 
 ### Screenshots
 
-Light mode mobile design
+####Light mode mobile design
 ![alt text](./screenshots/screenshot-mobile-light.png)
 
-Dark mode mobile design
+####Dark mode mobile design
 ![alt text](./screenshots/screenshot-mobile-dark.png)
 
-Option to filter by region
+####Option to filter by region
 ![alt text](./screenshots/screenshot-mobile-filters.png)
 
-Option to filter by region and use input filde to search for specific country
+####Option to filter by region and use input filde to search for specific country
 ![alt text](./screenshots/screenshot-mobile-filter-search.png)
 
-If you click on country card you can view detaild information
+####If you click on country card you can view detaild information
 
-Details mobile design(light mode)
+####Details mobile design(light mode)
 ![alt text](./screenshots/screenshot-mobile-details-light.png)
 
-Details mobile design(dark mode)
+####Details mobile design(dark mode)
 ![alt text](./screenshots/screenshot-mobile-details-dark.png)
 
-Light mode desktop design
+####Light mode desktop design
 ![alt text](./screenshots/screenshot-desktop-light.png)
 
-Dark mode desktop design
+####Dark mode desktop design
 ![alt text](./screenshots/screenshot-desktop-dark.png)
 
-Details desktop design(light mode)
+####Details desktop design(light mode)
 ![alt text](./screenshots/screenshot-desktop-details-light.png)
 
-Details desktop design(light mode)
+####Details desktop design(light mode)
 ![alt text](./screenshots/screenshot-desktop-details-dark.png)
 
 ## Links
