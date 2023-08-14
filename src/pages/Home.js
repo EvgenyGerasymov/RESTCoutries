@@ -1,14 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import Search from "./homeComponents/Search";
 import Filter from "./homeComponents/Filter";
-// import GridContent from "./homeComponents/GridContent";
 import { FiltersContextProvider } from "./homeComponents/FiltersContext";
 import LoadSpin from "./homeComponents/images/Loading.webp";
+import AppContext from "../AppContext";
 const GridContent = React.lazy(() => import("./homeComponents/GridContent"));
 
 function Home() {
+  const { toogle, setToogle } = useContext(AppContext);
   return (
-    <div>
+    <div
+      onClick={() => {
+        toogle && setToogle(false);
+      }}
+    >
       <FiltersContextProvider>
         <div className="flex flex-col mx-3 md:mx-10 items-start mt-10 gap-3 justify-between md:items-center md:flex-row">
           <Search />

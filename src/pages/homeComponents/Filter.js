@@ -1,12 +1,12 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import FiltersContext from "./FiltersContext";
 import ThemeContext from "../../ThemeContext";
+import AppContext from "../../AppContext";
 
 function Filter() {
   const { queryParams, setQueryParams } = useContext(FiltersContext);
-  const [toogle, setToogle] = useState(false);
   const { theme } = useContext(ThemeContext);
-
+  const { toogle, setToogle } = useContext(AppContext);
   function HoveringFilters() {
     return (
       <div
