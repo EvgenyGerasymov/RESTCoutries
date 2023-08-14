@@ -32,7 +32,7 @@ Dark mode mobile design
 ![alt text](./screenshots/screenshot-mobile-dark.png)
 
 Option to filter by region
-![alt text](./screenshots/screenshot-mobile-filter.png)
+![alt text](./screenshots/screenshot-mobile-filters.png)
 
 Option to filter by region and use input filde to search for specific country
 ![alt text](./screenshots/screenshot-mobile-filter-search.png)
