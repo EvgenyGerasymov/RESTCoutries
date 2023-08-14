@@ -26,36 +26,36 @@ Users should be able to:
 ### Screenshots
 
 Light mode mobile design
-![](./screenshots/screenshot-mobile-light)
+![alt text](./screenshots/screenshot-mobile-light)
 
 Dark mode mobile design
-![](./screenshots/screenshot-mobile-dark)
+![alt text](./screenshots/screenshot-mobile-dark)
 
 Option to filter by region
-![](./screenshots/screenshot-mobile-filter)
+![alt text](./screenshots/screenshot-mobile-filter)
 
 Option to filter by region and use input filde to search for specific country
-![](./screenshots/screenshot-mobile-filter-search)
+![alt text](./screenshots/screenshot-mobile-filter-search)
 
 If you click on country card you can view detaild information
 
 Details mobile design(light mode)
-![](./screenshots/screenshot-mobile-details-light)
+![alt text](./screenshots/screenshot-mobile-details-light)
 
 Details mobile design(dark mode)
-![](./screenshots/screenshot-mobile-details-dark)
+![alt text](./screenshots/screenshot-mobile-details-dark)
 
 Light mode desktop design
-![](./screenshots/screenshot-desktop-light)
+![alt text](./screenshots/screenshot-desktop-light)
 
 Dark mode desktop design
-![](./screenshots/screenshot-desktop-dark)
+![alt text](./screenshots/screenshot-desktop-dark)
 
 Details desktop design(light mode)
-![](./screenshots/screenshot-desktop-details-light)
+![alt text](./screenshots/screenshot-desktop-details-light)
 
 Details desktop design(light mode)
-![](./screenshots/screenshot-desktop-details-dark)
+![alt text](./screenshots/screenshot-desktop-details-dark)
 
 ## Links
 
