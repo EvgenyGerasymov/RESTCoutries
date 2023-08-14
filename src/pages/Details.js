@@ -1,16 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import AppContext from "../AppContext";
 import ThemeContext from ".././ThemeContext";
 
 function Details() {
   const nav = useNavigate();
+  const ref = useRef(null);
   const { countriesData } = useContext(AppContext);
   const { country } = useParams();
   const { theme } = useContext(ThemeContext);
+  useEffect(() => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  });
   return (
     <div className="mt-10 lg:max-w-[90%] mx-auto">
       <button
+        ref={ref}
         className={`rounded-md pl-5 pr-7 pb-1  ml-5 text-center text-lg ${
           theme
             ? " text-white bg-darkBlue_dmElements  shadow-black "
