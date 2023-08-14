@@ -9,7 +9,6 @@ export const AppContextProvider = ({ children }) => {
   const [toogle, setToogle] = useState(false);
 
   const { data } = useQuery(["countries"], () => {
-    console.log("here");
     return axios.get("https://restcountries.com/v3.1/all").then((res) => {
       res.data.forEach((country) => {
         countriesData[country.cca3] = country;

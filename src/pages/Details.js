@@ -95,7 +95,7 @@ function Details() {
                   {(countriesData[country] &&
                     Object.keys(countriesData[country]?.currencies)?.reduce(
                       (accumulator, currentValue) =>
-                        accumulator + currentValue.name + ",",
+                        accumulator + currentValue + ",",
                       ""
                     )) ||
                     "-"}
