@@ -6,7 +6,7 @@ const countriesData = {};
 export const AppContext = createContext(null);
 export const AppContextProvider = ({ children }) => {
   const { data } = useQuery(["countries"], () => {
-    return axios.get("http://localhost:3000/data.json").then((res) => {
+    return axios.get("data.json").then((res) => {
       res.data.forEach((country) => {
         countriesData[country.alpha3Code] = country;
       });
