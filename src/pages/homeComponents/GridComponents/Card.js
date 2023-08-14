@@ -5,7 +5,6 @@ import { useContext } from "react";
 function Card(props) {
   const nav = useNavigate();
   const { theme } = useContext(ThemeContext);
-
   return (
     <div
       className={`max-w-[400px] rounded-md overflow-hidden ${
@@ -14,12 +13,12 @@ function Card(props) {
           : "text-darkBlue_lmText shadow-gray-200 bg-white "
       } shadow-md `}
       onClick={() => {
-        nav(`/${props.data.alpha3Code}/details`);
+        nav(`/${props.data.cca3}/details`);
       }}
     >
-      <img src={props.data.flag} alt="" className="mb-5" />
+      <img src={props.data?.flags.svg} alt="" className="mb-5" />
       <div className="pl-7 pb-7">
-        <h2 className="text-2xl font-bold mb-5">{props.data.name}</h2>
+        <h2 className="text-2xl font-bold mb-5">{props.data?.name.common}</h2>
         <div className="flex flex-col gap-3 justify-center items-start mg-5">
           <h3 className="text-xl font-semibold">
             Population:
@@ -30,13 +29,16 @@ function Card(props) {
           <h3 className="text-xl font-semibold">
             Region:
             <span className="text-lg font-normal ml-3">
-              {props.data.region || "-"}
+              {props.data?.region || "-"}
             </span>
           </h3>
           <h3 className="text-xl font-semibold">
             Capital:
             <span className="text-lg font-normal ml-3">
-              {props.data.capital || "-"}
+              {props.data?.capital?.reduce(
+                (accumulator, currentValue) => accumulator + currentValue + ",",
+                ""
+              ) || "-"}
             </span>
           </h3>
         </div>

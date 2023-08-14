@@ -16,8 +16,8 @@ function GridContent() {
         data.filter((el) => {
           return queryParams.get("r") !== "all"
             ? el.region.toLowerCase().includes(queryParams.get("r")) &&
-                el.name.toLowerCase().includes(queryParams.get("q"))
-            : el.name.toLowerCase().includes(queryParams.get("q"));
+                el.name.common.toLowerCase().includes(queryParams.get("q"))
+            : el.name.common.toLowerCase().includes(queryParams.get("q"));
         })
       );
   }, [queryParams, data]);

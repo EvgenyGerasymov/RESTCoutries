@@ -6,11 +6,11 @@ const countriesData = {};
 export const AppContext = createContext(null);
 export const AppContextProvider = ({ children }) => {
   const { data } = useQuery(["countries"], () => {
-    return axios.get("data.json").then((res) => {
+    console.log("here");
+    return axios.get("https://restcountries.com/v3.1/all").then((res) => {
       res.data.forEach((country) => {
-        countriesData[country.alpha3Code] = country;
+        countriesData[country.cca3] = country;
       });
-
       return res.data;
     });
   });

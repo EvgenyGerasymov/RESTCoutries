@@ -8,7 +8,6 @@ function Details() {
   const { countriesData } = useContext(AppContext);
   const { country } = useParams();
   const { theme } = useContext(ThemeContext);
-
   return (
     <div className="mt-10 lg:max-w-[90%] mx-auto">
       <button
@@ -30,21 +29,23 @@ function Details() {
       >
         <div className="self-center">
           <img
-            src={countriesData[country]?.flag}
+            src={countriesData[country]?.flags?.svg}
             alt=""
             className=" lg:w-full "
           />
         </div>
         <section className=" mt-5 self-start md:self-center">
           <h2 className="text-2xl lg:text-4xl font-bold mb-5 ">
-            {countriesData[country]?.name || "-"}
+            {countriesData[country]?.name.common || "-"}
           </h2>
           <div className=" text-left md:flex md:items-start md:justify-between md:gap-20">
             <div className="flex flex-col gap-3 justify-center items-start ">
               <h3 className="text-lg font-semibold">
                 Native name:
                 <span className="text-lg font-normal ml-3">
-                  {countriesData[country]?.nativeName || "-"}
+                  {countriesData[country]?.name.nativeName[
+                    Object.keys(countriesData[country]?.name.nativeName)[0]
+                  ].common || "-"}
                 </span>
               </h3>
               <h3 className="text-lg font-semibold">
@@ -69,7 +70,11 @@ function Details() {
               <h3 className="text-lg font-semibold">
                 Capital:
                 <span className="text-lg font-normal ml-3">
-                  {countriesData[country]?.capital || "-"}
+                  {countriesData[country]?.capital.reduce(
+                    (accumulator, currentValue) =>
+                      accumulator + currentValue + ",",
+                    ""
+                  ) || "-"}
                 </span>
               </h3>
             </div>
@@ -77,9 +82,9 @@ function Details() {
               <h3 className="text-xl font-semibold">
                 Top Level Domain:
                 <span className="text-lg font-normal ml-3">
-                  {countriesData[country]?.topLevelDomain?.reduce(
+                  {countriesData[country]?.tld?.reduce(
                     (accumulator, currentValue) =>
-                      accumulator + currentValue + ",",
+                      accumulator + currentValue + " , ",
                     ""
                   ) || "-"}
                 </span>
@@ -87,21 +92,25 @@ function Details() {
               <h3 className="text-xl font-semibold">
                 Currensies:
                 <span className="text-lg font-normal ml-3">
-                  {countriesData[country]?.currencies?.reduce(
-                    (accumulator, currentValue) =>
-                      accumulator + currentValue.name + ",",
-                    ""
-                  ) || "-"}
+                  {(countriesData[country] &&
+                    Object.keys(countriesData[country]?.currencies)?.reduce(
+                      (accumulator, currentValue) =>
+                        accumulator + currentValue.name + ",",
+                      ""
+                    )) ||
+                    "-"}
                 </span>
               </h3>
               <h3 className="text-xl font-semibold">
                 Languages:
                 <span className="text-lg font-normal ml-3">
-                  {countriesData[country]?.languages?.reduce(
-                    (accumulator, currentValue) =>
-                      accumulator + currentValue.name + ",",
-                    ""
-                  ) || "-"}
+                  {(countriesData[country] &&
+                    Object.values(countriesData[country]?.languages)?.reduce(
+                      (accumulator, currentValue) =>
+                        accumulator + currentValue + ",",
+                      ""
+                    )) ||
+                    "-"}
                 </span>
               </h3>
             </div>
@@ -123,10 +132,10 @@ function Details() {
                       } shadow-md `}
                       key={key}
                       onClick={() => {
-                        nav(`/${countriesData[elm].alpha3Code}/details`);
+                        nav(`/${countriesData[elm]?.cca3}/details`);
                       }}
                     >
-                      {countriesData[elm].name}
+                      {countriesData[elm]?.name.common}
                     </button>
                   );
                 })}
