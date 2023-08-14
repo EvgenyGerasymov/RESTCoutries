@@ -108,7 +108,7 @@ function Details() {
           </div>
 
           {countriesData[country]?.borders && (
-            <div className="md:flex md:justify-between md:items-start my-5 w-full">
+            <div className="md:flex md:justify-between md:gap-5 md:items-start my-5 w-full">
               <h3 className="font-bold text-3xl  md:text-xl">
                 Border Counrties
               </h3>
