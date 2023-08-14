@@ -34,7 +34,7 @@ Users should be able to:
 #### Option to filter by region
 ![alt text](./screenshots/screenshot-mobile-filters.png)
 
-####Option to filter by region and use input filde to search for specific country
+#### Option to filter by region and use input filde to search for specific country
 ![alt text](./screenshots/screenshot-mobile-filter-search.png)
 
 #### If you click on country card you can view detaild information
