@@ -11,11 +11,8 @@ import { useContext } from "react";
 function App() {
   const client = new QueryClient();
   const { theme } = useContext(ThemeContext);
-  theme
-    ? document.body.classList.add("dm")
-    : document.body.classList.remove("dm");
   return (
-    <div className="App">
+    <div className={`App ${theme ? "dm" : "lm"}`}>
       <QueryClientProvider client={client}>
         <AppContextProvider>
           <Heading />
