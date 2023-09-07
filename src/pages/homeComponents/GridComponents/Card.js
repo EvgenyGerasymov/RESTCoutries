@@ -7,7 +7,7 @@ function Card(props) {
   const { theme } = useContext(ThemeContext);
   return (
     <div
-      className={`max-w-[400px] rounded-md overflow-hidden ${
+      className={`max-w-[400px] flex flex-col justify-between rounded-md overflow-hidden ${
         theme
           ? " text-white bg-darkBlue_dmElements  shadow-black "
           : "text-darkBlue_lmText shadow-gray-200 bg-white "
@@ -16,8 +16,8 @@ function Card(props) {
         nav(`/${props.data.cca3}/details`);
       }}
     >
-      <img src={props.data?.flags.svg} alt="" className="mb-5" />
-      <div className="pl-7 pb-7">
+      <img src={props.data?.flags.svg} alt="" className="mb-5 max-h-[200px] " />
+      <div className="p-7">
         <h2 className="text-2xl font-bold mb-5">{props.data?.name.common}</h2>
         <div className="flex flex-col gap-3 justify-center items-start mg-5">
           <h3 className="text-xl font-semibold">

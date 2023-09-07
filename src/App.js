@@ -12,7 +12,7 @@ function App() {
   const client = new QueryClient();
   const { theme } = useContext(ThemeContext);
   return (
-    <div className={`App ${theme ? "dm" : "lm"}`}>
+    <div className={`App ${theme ? "dm" : ""} min-h-screen`}>
       <QueryClientProvider client={client}>
         <AppContextProvider>
           <Heading />

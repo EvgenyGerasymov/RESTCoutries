@@ -13,10 +13,10 @@ function Details() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   });
   return (
-    <div className="mt-10 lg:max-w-[90%] mx-auto">
+    <div className=" lg:max-w-[90%] mt-5 mx-auto">
       <button
         ref={ref}
-        className={`rounded-md pl-5 pr-7 pb-1  ml-5 text-center text-lg ${
+        className={`rounded-md pl-5 pr-7 py-1 text-center text-lg ${
           theme
             ? " text-white bg-darkBlue_dmElements  shadow-black "
             : "text-darkBlue_lmText shadow-gray-400 bg-white "
@@ -25,10 +25,10 @@ function Details() {
           nav("/");
         }}
       >
-        <span className="text-4xl">←</span> Back
+        <span className="text-4xl leading-[0px]">←</span> Back
       </button>
       <div
-        className={`flex flex-col mx-5 mt-16 lg:flex-row lg:justify-between lg:gap-5  ${
+        className={`flex flex-col  mt-16 lg:flex-row lg:justify-between lg:gap-5  ${
           theme ? " text-white   " : "text-darkBlue_lmText  "
         }`}
       >
