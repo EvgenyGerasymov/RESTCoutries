@@ -36,7 +36,7 @@ function Details() {
           <img
             src={countriesData[country]?.flags?.svg}
             alt=""
-            className=" lg:w-full max-h-[700px] max-w-[700px] "
+            className=" lg:w-full lg:max-h-[700px] lg:max-w-[700px] "
           />
         </div>
         <section className=" mt-5 self-start md:self-center">
