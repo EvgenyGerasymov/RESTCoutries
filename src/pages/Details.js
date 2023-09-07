@@ -13,7 +13,7 @@ function Details() {
     ref.current?.scrollIntoView({ behavior: "smooth" });
   });
   return (
-    <div className=" lg:max-w-[90%] mt-5 mx-auto">
+    <div className=" lg:max-w-[90%] mt-5 lg:mx-auto mx-4">
       <button
         ref={ref}
         className={`rounded-md pl-5 pr-7 py-1 text-center text-lg ${
@@ -28,7 +28,7 @@ function Details() {
         <span className="text-4xl leading-[0px]">←</span> Back
       </button>
       <div
-        className={`flex flex-col  mt-16 lg:flex-row lg:justify-between lg:gap-5  ${
+        className={`flex flex-col  mt-16 lg:flex-row lg:justify-around lg:gap-10  ${
           theme ? " text-white   " : "text-darkBlue_lmText  "
         }`}
       >
@@ -36,7 +36,7 @@ function Details() {
           <img
             src={countriesData[country]?.flags?.svg}
             alt=""
-            className=" lg:w-full "
+            className=" lg:w-full max-h-[700px] max-w-[700px] "
           />
         </div>
         <section className=" mt-5 self-start md:self-center">
